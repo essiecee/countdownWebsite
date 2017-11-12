@@ -27,7 +27,7 @@
           <p>Select a date below to create a custom countdown timer:</p>
           <input id="datepicker" type="date">
           <p></p>
-          <p><a class="btn btn-primary btn-lg" href="customclock.html?date=test" role="button">Confirm »</a></p>
+          <p><a class="btn btn-primary btn-lg" onclick="load_page2()" role="button">Confirm »</a></p>
         </div>
       </div>
     <div style="text-align:center">
@@ -94,13 +94,12 @@
       /*datepicker.onblur = function(e){
         var date = datepicker.value
         alert("This is the date you picked: " + date);
-
       }; */
-      var date = datepicker.value
+      date = datepicker.value
+      console.log(date);
       function load_page2() {
         window.location.href = "customclock.html?date=" + date;
       }
-
     </script>
 
 </body>
