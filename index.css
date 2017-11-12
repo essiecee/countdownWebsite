@@ -2,5 +2,17 @@
   background-color:aquamarine;
 }
 .container{
-  font-family:arial;
+  font-family:"Lucida Console", Courier, monospace;
 }
+.equalButton{
+    padding: 1px 6px 1px 6px;
+    background: no-repeat 5px center;
+    background-color: black;
+    border-radius: 8px;
+}
+
+.equalButton img{
+    width: 75px;
+    height: 75px;
+    vertical-align: middle;
+}​
