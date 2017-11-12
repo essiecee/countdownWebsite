@@ -2,10 +2,6 @@
   font-family:"Lucida Console", Courier, monospace;
 }
 
-.ui-datepicker {
-  margin-left: 100px;
-  z-index: 1000;
-}
 .equalButton{
     padding: 1px 6px 1px 6px;
     background: no-repeat 5px center;
@@ -31,6 +27,28 @@
 }
 
 #header {
-  font-size: 60px;
-  font-family:American Typewriter,serif;
+  font-family: 'Nova Flat';font-size: 70px;
+}
+
+#datepicker {
+  position: relative;
+  left: 650px;
+
+}
+
+.btn{
+  position:relative;
+  left:685px;
+  background-color: white !important;
+  border-color: teal !important;
+  font-family: verdana !important;
+  color: teal !important;
+}
+
+#secondhalf {
+  position: relative;
+  background-image: url("backgroundart.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
