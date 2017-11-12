@@ -91,10 +91,16 @@
 
     <script>
       var datepicker = document.getElementById("datepicker")
-      datepicker.onblur = function(e){
+      /*datepicker.onblur = function(e){
         var date = datepicker.value
         alert("This is the date you picked: " + date);
-      };
+
+      }; */
+      var date = datepicker.value
+      function load_page2() {
+        window.location.href = "customclock.html?date=" + date;
+      }
+
     </script>
 
 </body>
