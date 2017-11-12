@@ -29,19 +29,19 @@
         <div class="row">
           <div class="col-md-4" style="text-align:center;">
             <h2><b>CHRISTMAS</b></h2>
-            <button type="button" class="equalButton" onclick="date='12/25/2017';load_page2()">
+            <button type="button" class="equalButton">
               <img src="christmastree.ico">
             </button>
           </div>
           <div class="col-md-4" style="text-align:center;">
             <h2><b>NEW YEAR'S DAY</b></h2>
-            <button type="button" class="equalButton" onclick="date='01/01/2018';load_page2()">
+            <button type="button" class="equalButton">
               <img src="newyearsday.png">
             </button>
           </div>
           <div class="col-md-4" style="text-align:center;">
             <h2><b>VALENTINE'S DAY</b></h2>
-            <button type="button" class="equalButton" onclick="date='02/14/2018';load_page2()">
+            <button type="button" class="equalButton">
               <img src="heart.png">
             </button>
             <br></br>
@@ -49,70 +49,65 @@
         </div>
         <div class="col-lg-4" style="text-align:center;">
           <h2><b>ST. PATRICK'S DAY</b></h2>
-          <button type="button" class="equalButton" onclick="date='03/14/2018';load_page2()">
+          <button type="button" class="equalButton">
             <img src="stpattys.gif">
           </button>
         </div>
         <div class="col-lg-4" style="text-align:center;">
           <h2><b>FOURTH OF JULY</b></h2>
-          <button type="button" class="equalButton" onclick="date='07/04/2018';load_page2()">
+          <button type="button" class="equalButton">
             <img src="fourthofjuly.gif">
           </button>
         </div>
         <div class="col-lg-4" style="text-align:center;">
           <h2><b>HALLOWEEN</b></h2>
-          <button type="button" class="equalButton" onclick="date='10/31/2018';load_page2()">
+          <button type="button" class="equalButton">
             <img src="ghost.png">
           </button>
           <br></br>
           <br></br>
         </div>
         <hr>
-
-        </div> <!-- /container -->
+        </div>
         </main>
-          <br></br>
+        <link href='https://fonts.googleapis.com/css?family=Nova Flat' rel='stylesheet'>
           <h1 id="header" style="text-align:center;"><b>CUSTOM COUNTDOWN</b></h1>
-
-          <p style="font-size:200%; text-align:center; font-family: American Typewriter">To create a custom countdown timer, please select a date below (MM/DD/YYYY):</p>
           <br></br>
+          <div id="secondhalf">
+            <br></br>
+          <p style="font-size:200%; text-align:center; font-family: Futura; color:white">To customize your own countdown timer, please select a date below (MM/DD/YYYY):</p>
+          <br></br>
+
           <input id="datepicker" type="date" style="text-align:center;">
             <br></br>
-            <br></br>
-          <p><a class="btn btn-primary btn-lg" onclick="load_page2()" role="button">Confirm »</a></p>
-          <br></br>
+          <p><a class="btn btn-primary btn-lg" onclick="load_page2()" role="button">Confirm</a></p>
           <br></br>
           <br></br>
         </div>
       </div>
     <div style="text-align:center">
       <br></br>
-      <br></br>
     </div>
       <div id="white" class="container">
         <!-- Example row of columns -->
 
     <footer class="container">
-      <br></br>
-      <p>© Alina, Esther, Ann, Nir 2017</p>
+                  <br></br>
+      <p>Made at CodeDay Seattle on November 12, 2017</p>
+      <p>© Designed and created by Alina, Esther, Ann, and Nir</p>
     </footer>
+  </div id="secondhalf">
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
 
-
     <script>
       var datepicker = document.getElementById("datepicker")
-      /*datepicker.onblur = function(e){
+      datepicker.onblur = function(e){
         var date = datepicker.value
         alert("This is the date you picked: " + date);
-      }; */
-      date = datepicker.value
-      console.log(date);
-      function load_page2() {
-        window.location.href = "customclock.html?date=" + date;
-      }
+      };
     </script>
 
 </body>
