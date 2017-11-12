@@ -3,6 +3,7 @@
 <html>
   <head>
     <title>test</title>
+    <script src="moment.js"></script>
     <style>
     body{
     	text-align: center;
@@ -70,7 +71,7 @@
 
     <script>
 
-    alert( location.search );
+    //alert( location.search );
     function getTimeRemaining(endtime) {
       var t = Date.parse(endtime) - Date.parse(new Date());
       var seconds = Math.floor((t / 1000) % 60);
@@ -104,14 +105,38 @@
         if (t.total <= 0) {
           clearInterval(timeinterval);
         }
-      }
+      } // updateClock
 
       updateClock();
       var timeinterval = setInterval(updateClock, 1000);
-    }
+    } //initializeClock
 
-    var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
+    var currentdate = new Date();
+
+    var url_date = window.location.search.split('=')[1];
+    console.log(url_date);
+    var saved_month = url_date.split('/')[0];
+    var saved_day = url_date.split('/')[1];
+    var saved_year = url_date.split('/')[2];
+
+    var a = moment([saved_year, saved_month-1, saved_day]);
+    var b = moment([currentdate.getFullYear(), currentdate.getMonth(), currentdate.getDate()]);
+    var day_difference = a.diff(b, 'days');
+    console.log(a.diff(b, 'days'));
+
+    var datetime = currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/"
+                + currentdate.getFullYear() + " @ "
+                + currentdate.getHours() + ":"
+                + currentdate.getMinutes() + ":"
+                + currentdate.getSeconds();
+    var deadline = new Date(Date.parse(new Date()) + day_difference * 24 * 60 * 60 * 1000);
     initializeClock('clockdiv', deadline);
+    //console.log(window.location.search);
+    //var end_date = date;
+
+
+
     </script>
   </body>
 </html>
